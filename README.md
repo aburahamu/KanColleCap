@@ -1,5 +1,6 @@
-## KanColleCap
+# KanColleCap
 艦これのゲーム画面をキャプチャし艦隊や基地航空隊の編成画像を作成するアプリです。
+<img width="602" height="302" alt="Image" src="https://github.com/user-attachments/assets/5f44b911-2ce5-41e0-875a-552e61de3072" />
 
 ## 前提
 - Python 3.10以上をインストールしておいてください
@@ -30,21 +31,23 @@
 2. build.batをダブルクリックしKanColleCap.exeを作成する
 
 ⚙️ 設定ファイル（config.json）
+```
 {
-  "save_dir": "D:/KanColleCap/Screenshots",
-  "hensei": {
-    "top_point": 0.2,
-    "left_point": 0.4,
-    "width": 0.55,
-    "height": 0.75
+  "save_dir": "D:/KanColleCap/Screenshots", //画像の保存先フォルダパス。SetFolderで上書きされるため変更不要。
+  "hensei": { //艦隊用の設定値
+    "top_point": 0.2, //ゲーム画面サイズの上から何%の位置から切り取るか
+    "left_point": 0.4, //ゲーム画面サイズの左から何%の位置から切り取るか
+    "width": 0.55, //ゲーム画面サイズに対して何%の幅で切り取るか
+    "height": 0.75 //ゲーム画面サイズに対して何%の高さで切り取るか
   },
-  "kichi": {
-    "top_point": 0.3,
-    "left_point": 0.7,
-    "width": 0.25,
-    "height": 0.65
+  "kichi": { //基地航空隊用の設定値
+    "top_point": 0.3, //ゲーム画面サイズの上から何%の位置から切り取るか
+    "left_point": 0.7, //ゲーム画面サイズの左から何%の位置から切り取るか
+    "width": 0.25, //ゲーム画面サイズに対して何%の幅で切り取るか
+    "height": 0.65 //ゲーム画面サイズに対して何%の高さで切り取るか
   }
 }
+```
 
 ## ライセンス
 AGPL-3.0
