@@ -1,4 +1,4 @@
-title StUmaCap Build Script
+title KanColleCap Build Script
 @echo off
 chcp 65001
 cd %~dp0
@@ -43,7 +43,8 @@ if %ERRORLEVEL% neq 0 (
 
 echo.
 echo [BUILD EXE]
-%PYTHON% -m PyInstaller app.py --onefile --noconsole --icon=icon.ico --add-data "img;img"
+%PYTHON% -m PyInstaller app.py --onefile --noconsole --icon=icon.ico --add-data "config.json;."
+
 if %ERRORLEVEL% neq 0 (
     echo.
     echo [Failed]

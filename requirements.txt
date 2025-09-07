@@ -2,3 +2,4 @@ pygetwindow
 pyautogui
 pillow
 mss
+PyInstaller

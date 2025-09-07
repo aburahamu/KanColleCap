@@ -4,16 +4,12 @@
         "top_point": 0.23,
         "left_point": 0.39,
         "width": 0.59,
-        "height": 0.75,
-        "view_width": 60,
-        "view_height": 50
+        "height": 0.75
     },
     "kichi": {
         "top_point": 0.26,
         "left_point": 0.72,
         "width": 0.27,
-        "height": 0.7,
-        "view_width": 90,
-        "view_height": 150
+        "height": 0.7
     }
 }
