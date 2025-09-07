@@ -43,7 +43,7 @@ if %ERRORLEVEL% neq 0 (
 
 echo.
 echo [BUILD EXE]
-%PYTHON% -m PyInstaller app.py --onefile --noconsole --icon=icon.ico --add-data "config.json;."
+%PYTHON% -m PyInstaller app.py --onefile --noconsole --icon=icon.ico --add-data "config.json;." --add-data "icon.ico;."
 
 if %ERRORLEVEL% neq 0 (
     echo.
