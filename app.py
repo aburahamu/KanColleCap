@@ -15,23 +15,6 @@ def resource_path(relative_path):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.dirname(os.path.abspath(__file__)), relative_path)
 
-VERSION = "1.0.2"
-CONFIG_PATH = resource_path('config.json')
-
-# 設定読み込み
-with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
-    config = json.load(f)
-
-save_dir = config['save_dir']
-hensei = config['hensei']
-kichi = config['kichi']
-fleet_labels = []
-kichi_labels = []
-fleet_images_display = [None] * 12
-fleet_images_original = [None] * 12
-kichi_images_display = [None] * 3
-kichi_images_original = [None] * 3
-
 # ゲームウィンドウ取得
 def get_game_window():
     wins = gw.getWindowsWithTitle('艦隊これくしょん')
@@ -187,10 +170,27 @@ def get_rowNum(i):
         if i == a or i == b:
             return pairs[(a, b)]
     return None
-    
+
+VERSION = "1.0.2"
+CONFIG_PATH = resource_path('config.json')
+
+# 設定読み込み
+with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
+    config = json.load(f)
+
+save_dir = config['save_dir']
+hensei = config['hensei']
+kichi = config['kichi']
+fleet_labels = []
+kichi_labels = []
+fleet_images_display = [None] * 12
+fleet_images_original = [None] * 12
+kichi_images_display = [None] * 3
+kichi_images_original = [None] * 3
+
 # GUI初期化
 root = tk.Tk()
-root.title(f"KanColleCap Version.{VERSION}")
+root.title(f"KanColleCap")
 root.geometry("600x270")
 
 # アイコン設定（タイトルバー用）
